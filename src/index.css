@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Anek Bangla", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-rose: #e11d48; /* rose-600 */
+  --color-brand-crimson: #be123c; /* rose-700 */
+  --color-brand-blush: #fff1f2; /* rose-50 */
+  --color-brand-accent: #f43f5e; /* rose-500 */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom shimmering loading state */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Custom Pulse ring for attention-grabbing components */
+@keyframes ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(219, 39, 119, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(219, 39, 119, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(219, 39, 119, 0);
+  }
+}
+
+.attention-pulse {
+  animation: ring-pulse 2s infinite;
+}
+
